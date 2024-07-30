@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia elements examples</title>
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <h3>Audio</h3>
+
+            <!-- <audio src="./assets/audio/pianos-by-jtwayne.mp3" controls controlslist="nodownload" loop></audio> -->
+            <audio controls controlslist="nodownload" loop>
+                <source src="./assets/audio/pianos-by-jtwayne.mp3" type="audio/mpeg">
+                <!-- <source src="./assets/audio/pianos-by-jtwayne.ogg" type="audio/ogg"> -->
+                <!-- <source src="./assets/audio/pianos-by-jtwayne.wav" type="audio/wav"> -->
+
+                Attenzione, il tuo browser non supporta file mpeg, ogg o wav.
+            </audio>
+        </section>
+
+        <section>
+            <h3>Video</h3>
+
+            <video src="./assets/video/IMG_6303.mp4" width="600" controls autoplay="on"
+                poster="./assets/imgs/earth-hi.jpg">
+            </video>
+
+        </section>
+
+        <section>
+            <h3>Iframe</h3>
+
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/m4WSQHmTyUI?si=h5jqFWokLIxkkkTG"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.97635563113!2d12.474813211997962!3d41.871855165684636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6173fb8c8ea7%3A0x1a413c9507f97391!2sEPICODE!5e0!3m2!1sit!2sit!4v1722334233033!5m2!1sit!2sit"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            <iframe src="https://epicode.com" width="100%" height="600"></iframe>
+        </section>
+
+    </main>
+</body>
+
+</html>

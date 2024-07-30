@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table examples</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            /* la proprietà border-collapse, quando settata su "collapse", attiva la possibilità di vedere il bordo delle <tr>,
+                oltre a eliminare lo spazio tra i bordi degli elementi interni alla tabella (spazio modificabile con la proprietà border-spacing) */
+        }
+
+        table {
+            width: 100%;
+        }
+
+        caption {
+            background-color: palevioletred;
+            color: white;
+        }
+
+        tr {
+            /* border: 2px solid red; */
+        }
+
+        th {
+            border-color: rgb(255, 0, 0);
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tfoot {
+            background-color: black;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <!-- table raggruppa gli elementi della tabella -->
+
+        <!-- caption descrive il contenuto della tabella (facoltativo) -->
+        <caption>La nostra prima tabella</caption>
+        <!-- tr definisce una prima riga di elementi, in questo caso di intestazione -->
+        <thead>
+            <tr>
+                <!-- ad ogni th corrisponde un'intestazione e di conseguenza una colonna -->
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Età</th>
+                <th>Telefono</th>
+                <th>Indirizzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- td è una cella contenente il dato corrispondente alla sua intestazione 
+                 (la posizione è importante, deve corrispondere a quella della sua th) -->
+                <td>Stefano</td>
+                <td>Miceli</td>
+                <td>30</td>
+                <td>12981238723</td>
+                <td>via dei bardi 30</td>
+            </tr>
+            <tr>
+                <!-- td è una cella contenente il dato corrispondente alla sua intestazione 
+                 (la posizione è importante, deve corrispondere a quella della sua th) -->
+
+                <!-- rowspan è un attributo che dà la possibilità ad una cella di estendersi in verticale per un 
+                  certo numero di spazi definito dal valore numerico applicato -->
+                <td rowspan="3">Stefano</td>
+                <td>Miceli</td>
+                <td>30</td>
+                <td>12981238723</td>
+                <td>via dei bardi 30</td>
+            </tr>
+            <tr>
+                <!-- td è una cella contenente il dato corrispondente alla sua intestazione 
+                 (la posizione è importante, deve corrispondere a quella della sua th) -->
+
+                <td>Miceli</td>
+                <td></td>
+                <td>12981238723</td>
+                <td>via dei bardi 30</td>
+            </tr>
+            <tr>
+                <!-- td è una cella contenente il dato corrispondente alla sua intestazione 
+                 (la posizione è importante, deve corrispondere a quella della sua th) -->
+
+                <!-- colspan è un attributo che dà la possibilità ad una cella di estendersi in verticale per un 
+                  certo numero di spazi definito dal valore numerico applicato -->
+                <td colspan="2">Miceli</td>
+
+                <td>12981238723</td>
+                <td>via dei bardi 30</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Epicode&copy; 2024</td>
+            </tr>
+        </tfoot>
+
+
+    </table>
+
+</body>
+
+</html>

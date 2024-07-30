@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form examples</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Login</legend>
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Inserisci il tuo username" required>
+                </div>
+                <br>
+                <div>
+                    <label for="userPassword">Password:</label>
+                    <input type="password" id="userPassword" placeholder="*****" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Reservation</legend>
+                <div>
+                    <label for="clientName">Guest Name:</label>
+                    <input type="text" id="clientName" placeholder="Insert your name for the reservation" size="50"
+                        required>
+                </div>
+                <br>
+                <div>
+                    <label for="numOfGuests">Number of people:</label>
+                    <select id="numOfGuests" required>
+                        <option></option>
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                        <option>Four</option>
+                        <option>Five</option>
+                        <option>Six</option>
+                        <option>Seven</option>
+                        <option>Eight</option>
+                        <option>Nine</option>
+                        <option>Ten</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" id="smoking">
+                    <label for="smoking" style="display: inline">Fumatori</label>
+                </div>
+
+                <br>
+
+                <!-- nel caso dei radio buttons è imperativo utilizzare l'attributo name con LO STESSO VALORE, 
+                 in modo che la selezione sia univoca ed esclusiva -->
+                <div>
+                    <input type="radio" name="preferredArea" id="outside">
+                    <label for="outside" style="display: inline">Outside</label>
+                    <input type="radio" name="preferredArea" id="inside">
+                    <label for="inside" style="display: inline">Inside</label>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="datetime">Date / Time</label>
+                    <input type="datetime-local" id="datetime">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="specialReq">Special Requests</label>
+                    <textarea id="specialReq" placeholder="Insert your special requests" rows="10" cols="50"></textarea>
+                </div>
+
+            </fieldset>
+
+            <br>
+
+            <!-- <input type="button" value="Submit"> -->
+            <!-- oggi creiamo i bottoni usando il tag button, invece che input type="button" -->
+            <!-- un bottone di base invia in ogni caso i dati del form, 
+              ma è bene essere espliciti sulla sua funzione andando ad applicare il type="submit" sul bottone principale -->
+            <button type="submit">Submit data</button>
+            <button type="reset">Reset</button>
+            <!-- il type button sovrascrive il comportamento di base di un bottone inserito in un form, 
+             questo ci permette di applicare il comportamento che vogliamo (via JS) -->
+            <button type="button" onclick="alert('bottone alert cliccato')">Alert</button>
+
+        </form>
+    </main>
+
+</body>
+
+</html>
